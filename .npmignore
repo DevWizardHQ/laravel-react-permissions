@@ -1,0 +1,29 @@
+# Source files (only include built dist)
+components/
+hooks/
+types/
+
+# Build tools and config
+tsup.config.ts
+tsconfig.json
+eslint.config.js
+.prettierrc.json
+.prettierignore
+
+# Development files
+*.log
+*.tgz
+node_modules/
+.DS_Store
+.env*
+.vscode/
+.idea/
+
+# Git and GitHub
+.git/
+.github/
+
+# Only include built files and documentation
+!dist/**
+!README.md
+!CHANGELOG.md
