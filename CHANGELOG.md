@@ -42,7 +42,6 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Real-world usage scenarios
 - Migration guide from other solutions
 
-
 ---
 
 **Full Changelog**: [View on GitHub](your-repo-url/compare/v1.0.0...v1.1.0)
