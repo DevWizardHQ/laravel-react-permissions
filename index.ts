@@ -1,11 +1,9 @@
-// Main permissions system components
+// Main exports
 export { Can } from './components/can';
 export { withPermission } from './components/with-permission';
-
-// Hooks
 export { usePermissions } from './hooks/use-permissions';
 
-// Types
+// Type exports
 export type {
   Auth,
   SharedData,
@@ -16,9 +14,3 @@ export type {
   UsePermissionsReturn,
   WithPermissionOptions,
 } from './types';
-
-// Re-export everything for convenience
-export * from './components/can';
-export * from './components/with-permission';
-export * from './hooks/use-permissions';
-export * from './types';

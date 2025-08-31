@@ -3,7 +3,10 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: ['index.ts'],
   format: ['esm'],
-  dts: true,
+  dts: {
+    resolve: true,
+    entry: './index.ts',
+  },
   splitting: false,
   sourcemap: true,
   clean: true,
@@ -16,4 +19,8 @@ export default defineConfig({
       js: '.js',
     };
   },
+  // Ensure proper bundling for better imports
+  bundle: true,
+  // Keep names for better debugging and IDE support
+  keepNames: true,
 });
