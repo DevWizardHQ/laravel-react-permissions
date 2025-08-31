@@ -42,10 +42,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### What's Changed
 
-* build(deps): bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/1
+- build(deps): bump actions/checkout from 4 to 5 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/1
 
 ### New Contributors
 
-* @dependabot[bot] made their first contribution in https://github.com/DevWizardHQ/laravel-react-permissions/pull/1
+- @dependabot[bot] made their first contribution in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/1
 
 **Full Changelog**: https://github.com/DevWizardHQ/laravel-react-permissions/commits/0.1.0
