@@ -64,6 +64,10 @@ export function usePermissions(permissions?: string[]) {
     if (pattern.trim() === 'true') return true;
     if (pattern.trim() === 'false') return false;
 
+    // Special case: if pattern is just '*', it should match for all users
+    // including those with empty permissions (universal access)
+    if (pattern.trim() === '*') return true;
+
     // Convert pattern to regex for simple patterns
     let regexPattern = pattern
       .replace(/\./g, '\\.') // Escape dots
@@ -103,9 +107,17 @@ export function usePermissions(permissions?: string[]) {
       .replace(/&&&/g, '&&'); // Triple & becomes &&
 
     // Find all permission patterns in the expression
-    const permissionRegex =
-      /[a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*(?![|&])/g;
+    // This regex matches permission patterns in the expression.
+    // Breakdown of alternation groups:
+    //   \*         - matches a standalone '*' wildcard
+    //   \?         - matches a standalone '?' wildcard
+    //   [a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*
+    //              - matches standard permission strings, e.g. 'users.create', 'posts.*'
+    //   true|false - matches boolean literals 'true' or 'false'
+    // The (?![|&]) negative lookahead ensures we don't match permission patterns that are immediately followed by a logical operator.
+    const permissionRegex = /(?:\*|\?|[a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*|true|false)(?![|&])/g;
     const permissions = jsExpression.match(permissionRegex) || [];
+
 
     // Replace each permission with its boolean evaluation
     let evaluatedExpression = jsExpression;
@@ -116,13 +128,18 @@ export function usePermissions(permissions?: string[]) {
 
       // Use simple pattern checking to avoid circular dependency
       const hasPermissionResult = checkSimplePermissionPattern(permission);
-      evaluatedExpression = evaluatedExpression.replace(
-        new RegExp(
-          `\\b${permission.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`,
-          'g'
-        ),
-        hasPermissionResult.toString()
-      );
+
+      // For wildcard patterns like * or ?, we need special handling since they don't have word boundaries
+      if (permission === '*' || permission === '?') {
+        // Replace standalone wildcards not part of larger patterns
+        const wildcardRegex = new RegExp(`\\${permission}(?![a-zA-Z0-9_.])`, 'g');
+        evaluatedExpression = evaluatedExpression.replace(wildcardRegex, hasPermissionResult.toString());
+      } else {
+        // For normal permissions, use word boundaries
+        const escapedPermission = permission.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const permissionRegex = new RegExp(`\\b${escapedPermission}\\b`, 'g');
+        evaluatedExpression = evaluatedExpression.replace(permissionRegex, hasPermissionResult.toString());
+      }
     }
 
     try {

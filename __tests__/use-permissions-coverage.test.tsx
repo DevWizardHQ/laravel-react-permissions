@@ -105,8 +105,8 @@ describe('usePermissions - Final Coverage Tests', () => {
 
       const { result } = renderHook(() => usePermissions());
 
-      // All patterns should return false with no permissions
-      expect(result.current.hasPermission('*')).toBe(false);
+      // All patterns should return false with no permissions except universal wildcard
+      expect(result.current.hasPermission('*')).toBe(true); // Universal wildcard should work
       expect(result.current.hasPermission('?')).toBe(false);
       expect(result.current.hasPermission('users.*')).toBe(false);
       expect(result.current.hasPermission('true')).toBe(true); // Boolean literal should still work
