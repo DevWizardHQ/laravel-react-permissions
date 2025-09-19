@@ -9,18 +9,30 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### What's Changed
 
-* build(deps-dev): bump jest-environment-jsdom from 30.1.1 to 30.1.2 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/3
-* build(deps-dev): bump jest from 30.1.1 to 30.1.2 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/4
-* build(deps-dev): bump eslint from 9.34.0 to 9.35.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/6
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.41.0 to 8.43.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/8
-* build(deps-dev): bump @typescript-eslint/parser from 8.41.0 to 8.43.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/9
-* build(deps-dev): bump jest from 30.1.2 to 30.1.3 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/7
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.43.0 to 8.44.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/10
-* build(deps-dev): bump ts-jest from 29.4.1 to 29.4.2 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/11
-* build(deps-dev): bump @types/react from 19.1.12 to 19.1.13 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/12
-* build(deps-dev): bump globals from 16.3.0 to 16.4.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/14
-* fix: Wildcard pattern matching fails when userPermissions array is empty by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/16
-* build(deps): bump actions/setup-node from 4 to 5 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/5
+- build(deps-dev): bump jest-environment-jsdom from 30.1.1 to 30.1.2 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/3
+- build(deps-dev): bump jest from 30.1.1 to 30.1.2 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/4
+- build(deps-dev): bump eslint from 9.34.0 to 9.35.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/6
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.41.0 to 8.43.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/8
+- build(deps-dev): bump @typescript-eslint/parser from 8.41.0 to 8.43.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/9
+- build(deps-dev): bump jest from 30.1.2 to 30.1.3 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/7
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.43.0 to 8.44.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/10
+- build(deps-dev): bump ts-jest from 29.4.1 to 29.4.2 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/11
+- build(deps-dev): bump @types/react from 19.1.12 to 19.1.13 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/12
+- build(deps-dev): bump globals from 16.3.0 to 16.4.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/14
+- fix: Wildcard pattern matching fails when userPermissions array is empty by @iqbalhasandev in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/16
+- build(deps): bump actions/setup-node from 4 to 5 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/5
 
 **Full Changelog**: https://github.com/DevWizardHQ/laravel-react-permissions/compare/v1.1.1...v1.1.2
 
