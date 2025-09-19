@@ -132,7 +132,7 @@ export function usePermissions(permissions?: string[]) {
       // For wildcard patterns like * or ?, we need special handling since they don't have word boundaries
       if (permission === '*' || permission === '?') {
         // Replace standalone wildcards not part of larger patterns
-        const wildcardRegex = new RegExp(`\\${permission}(?![a-zA-Z0-9_])`, 'g');
+        const wildcardRegex = new RegExp(`\\${permission}(?![a-zA-Z0-9_.])`, 'g');
         evaluatedExpression = evaluatedExpression.replace(wildcardRegex, hasPermissionResult.toString());
       } else {
         // For normal permissions, use word boundaries
