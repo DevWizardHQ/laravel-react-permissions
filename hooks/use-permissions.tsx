@@ -115,9 +115,9 @@ export function usePermissions(permissions?: string[]) {
     //              - matches standard permission strings, e.g. 'users.create', 'posts.*'
     //   true|false - matches boolean literals 'true' or 'false'
     // The (?![|&]) negative lookahead ensures we don't match permission patterns that are immediately followed by a logical operator.
-    const permissionRegex = /(?:\*|\?|[a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*|true|false)(?![|&])/g;
+    const permissionRegex =
+      /(?:\*|\?|[a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*|true|false)(?![|&])/g;
     const permissions = jsExpression.match(permissionRegex) || [];
-
 
     // Replace each permission with its boolean evaluation
     let evaluatedExpression = jsExpression;
@@ -132,13 +132,25 @@ export function usePermissions(permissions?: string[]) {
       // For wildcard patterns like * or ?, we need special handling since they don't have word boundaries
       if (permission === '*' || permission === '?') {
         // Replace standalone wildcards not part of larger patterns
-        const wildcardRegex = new RegExp(`\\${permission}(?![a-zA-Z0-9_.])`, 'g');
-        evaluatedExpression = evaluatedExpression.replace(wildcardRegex, hasPermissionResult.toString());
+        const wildcardRegex = new RegExp(
+          `\\${permission}(?![a-zA-Z0-9_.])`,
+          'g'
+        );
+        evaluatedExpression = evaluatedExpression.replace(
+          wildcardRegex,
+          hasPermissionResult.toString()
+        );
       } else {
         // For normal permissions, use word boundaries
-        const escapedPermission = permission.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const escapedPermission = permission.replace(
+          /[.*+?^${}()|[\]\\]/g,
+          '\\$&'
+        );
         const permissionRegex = new RegExp(`\\b${escapedPermission}\\b`, 'g');
-        evaluatedExpression = evaluatedExpression.replace(permissionRegex, hasPermissionResult.toString());
+        evaluatedExpression = evaluatedExpression.replace(
+          permissionRegex,
+          hasPermissionResult.toString()
+        );
       }
     }
 
