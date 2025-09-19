@@ -107,10 +107,14 @@ export function usePermissions(permissions?: string[]) {
       .replace(/&&&/g, '&&'); // Triple & becomes &&
 
     // Find all permission patterns in the expression
-    // This regex matches:
-    // 1. Standard permissions: word.word.* (starting with letter/underscore)
-    // 2. Standalone wildcards: * or ? 
-    // 3. Boolean literals: true, false
+    // This regex matches permission patterns in the expression.
+    // Breakdown of alternation groups:
+    //   \*         - matches a standalone '*' wildcard
+    //   \?         - matches a standalone '?' wildcard
+    //   [a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*
+    //              - matches standard permission strings, e.g. 'users.create', 'posts.*'
+    //   true|false - matches boolean literals 'true' or 'false'
+    // The (?![|&]) negative lookahead ensures we don't match permission patterns that are immediately followed by a logical operator.
     const permissionRegex = /(?:\*|\?|[a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*|true|false)(?![|&])/g;
     const permissions = jsExpression.match(permissionRegex) || [];
 
