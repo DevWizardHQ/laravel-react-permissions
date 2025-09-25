@@ -96,12 +96,23 @@ export function usePermissions(permissions?: string[]) {
     if (expression.trim() === 'false') return false;
 
     // Normalize logical operators to JavaScript equivalents
-    // First, add spaces around operators to ensure proper parsing
-    let jsExpression = expression
-      .replace(/\|\|/g, ' || ') // Add spaces around ||
-      .replace(/&&/g, ' && ') // Add spaces around &&
-      .replace(/(?<!\|)\|(?!\|)/g, ' || ') // Single | becomes || with spaces (not preceded by |)
-      .replace(/(?<!&)&(?!&)/g, ' && '); // Single & becomes && with spaces (not preceded by &)
+    // Use a more robust approach to avoid double replacement issues
+    let jsExpression = expression;
+    
+    // First, replace double operators with temporary markers
+    jsExpression = jsExpression
+      .replace(/\|\|/g, ' DOUBLE_PIPE ') // Double || becomes temporary marker
+      .replace(/&&/g, ' DOUBLE_AMP ');   // Double && becomes temporary marker
+    
+    // Then replace single operators
+    jsExpression = jsExpression
+      .replace(/\|/g, ' || ') // Single | becomes ||
+      .replace(/&/g, ' && '); // Single & becomes &&
+    
+    // Finally, replace temporary markers with proper operators
+    jsExpression = jsExpression
+      .replace(/DOUBLE_PIPE/g, ' || ') // Double || with spaces
+      .replace(/DOUBLE_AMP/g, ' && '); // Double && with spaces
 
     // Clean up multiple spaces
     jsExpression = jsExpression.replace(/\s+/g, ' ').trim();
