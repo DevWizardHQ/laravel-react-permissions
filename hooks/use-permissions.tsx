@@ -98,17 +98,17 @@ export function usePermissions(permissions?: string[]) {
     // Normalize logical operators to JavaScript equivalents
     // Use a more robust approach to avoid double replacement issues
     let jsExpression = expression;
-    
+
     // First, replace double operators with temporary markers
     jsExpression = jsExpression
       .replace(/\|\|/g, ' DOUBLE_PIPE ') // Double || becomes temporary marker
-      .replace(/&&/g, ' DOUBLE_AMP ');   // Double && becomes temporary marker
-    
+      .replace(/&&/g, ' DOUBLE_AMP '); // Double && becomes temporary marker
+
     // Then replace single operators
     jsExpression = jsExpression
       .replace(/\|/g, ' || ') // Single | becomes ||
       .replace(/&/g, ' && '); // Single & becomes &&
-    
+
     // Finally, replace temporary markers with proper operators
     jsExpression = jsExpression
       .replace(/DOUBLE_PIPE/g, ' || ') // Double || with spaces
