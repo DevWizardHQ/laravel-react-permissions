@@ -96,27 +96,27 @@ export function usePermissions(permissions?: string[]) {
     if (expression.trim() === 'false') return false;
 
     // Normalize logical operators to JavaScript equivalents
-    // Process single operators first, then ensure double operators are correct
+    // First, add spaces around operators to ensure proper parsing
     let jsExpression = expression
-      .replace(/\|(?!\|)/g, '||') // Single | becomes ||
-      .replace(/&(?!&)/g, '&&'); // Single & becomes &&
+      .replace(/\|\|/g, ' || ') // Add spaces around ||
+      .replace(/&&/g, ' && ')   // Add spaces around &&
+      .replace(/(?<!\|)\|(?!\|)/g, ' || ') // Single | becomes || with spaces (not preceded by |)
+      .replace(/(?<!&)&(?!&)/g, ' && ');  // Single & becomes && with spaces (not preceded by &)
 
-    // Now ensure we don't have triple operators from the above replacement
-    jsExpression = jsExpression
-      .replace(/\|\|\|/g, '||') // Triple | becomes ||
-      .replace(/&&&/g, '&&'); // Triple & becomes &&
+    // Clean up multiple spaces
+    jsExpression = jsExpression.replace(/\s+/g, ' ').trim();
 
     // Find all permission patterns in the expression
     // This regex matches permission patterns in the expression.
     // Breakdown of alternation groups:
     //   \*         - matches a standalone '*' wildcard
     //   \?         - matches a standalone '?' wildcard
-    //   [a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*
-    //              - matches standard permission strings, e.g. 'users.create', 'posts.*'
+    //   [a-zA-Z_][a-zA-Z0-9_.*?-]*(?:\.[a-zA-Z0-9_.*?-]*)*
+    //              - matches standard permission strings, e.g. 'users.create', 'posts.*', 'properties.view-all'
     //   true|false - matches boolean literals 'true' or 'false'
     // The (?![|&]) negative lookahead ensures we don't match permission patterns that are immediately followed by a logical operator.
     const permissionRegex =
-      /(?:\*|\?|[a-zA-Z_][a-zA-Z0-9_.*?]*(?:\.[a-zA-Z0-9_.*?]*)*|true|false)(?![|&])/g;
+      /(?:\*|\?|[a-zA-Z_][a-zA-Z0-9_.*?-]*(?:\.[a-zA-Z0-9_.*?-]*)*|true|false)(?![|&])/g;
     const permissions = jsExpression.match(permissionRegex) || [];
 
     // Replace each permission with its boolean evaluation
