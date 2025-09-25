@@ -99,9 +99,9 @@ export function usePermissions(permissions?: string[]) {
     // First, add spaces around operators to ensure proper parsing
     let jsExpression = expression
       .replace(/\|\|/g, ' || ') // Add spaces around ||
-      .replace(/&&/g, ' && ')   // Add spaces around &&
+      .replace(/&&/g, ' && ') // Add spaces around &&
       .replace(/(?<!\|)\|(?!\|)/g, ' || ') // Single | becomes || with spaces (not preceded by |)
-      .replace(/(?<!&)&(?!&)/g, ' && ');  // Single & becomes && with spaces (not preceded by &)
+      .replace(/(?<!&)&(?!&)/g, ' && '); // Single & becomes && with spaces (not preceded by &)
 
     // Clean up multiple spaces
     jsExpression = jsExpression.replace(/\s+/g, ' ').trim();

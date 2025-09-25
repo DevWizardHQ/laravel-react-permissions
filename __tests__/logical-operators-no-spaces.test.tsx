@@ -34,9 +34,15 @@ describe('Logical Operators Without Spaces', () => {
       const { result } = renderHook(() => usePermissions());
 
       // Test various OR expressions without spaces
-      expect(result.current.hasPermission('properties.view-all||properties.view-own')).toBe(true);
-      expect(result.current.hasPermission('users.create||posts.view')).toBe(false); // Neither permission exists
-      expect(result.current.hasPermission('properties.view-all||users.create')).toBe(true); // One permission exists
+      expect(
+        result.current.hasPermission('properties.view-all||properties.view-own')
+      ).toBe(true);
+      expect(result.current.hasPermission('users.create||posts.view')).toBe(
+        false
+      ); // Neither permission exists
+      expect(
+        result.current.hasPermission('properties.view-all||users.create')
+      ).toBe(true); // One permission exists
     });
 
     it('should handle single | without spaces around operators', () => {
@@ -45,9 +51,15 @@ describe('Logical Operators Without Spaces', () => {
       const { result } = renderHook(() => usePermissions());
 
       // Test single | expressions without spaces
-      expect(result.current.hasPermission('properties.view-all|properties.view-own')).toBe(true);
-      expect(result.current.hasPermission('properties.view-all|users.create')).toBe(true); // One permission exists
-      expect(result.current.hasPermission('users.create|posts.view')).toBe(false); // Neither permission exists
+      expect(
+        result.current.hasPermission('properties.view-all|properties.view-own')
+      ).toBe(true);
+      expect(
+        result.current.hasPermission('properties.view-all|users.create')
+      ).toBe(true); // One permission exists
+      expect(result.current.hasPermission('users.create|posts.view')).toBe(
+        false
+      ); // Neither permission exists
     });
   });
 
@@ -58,9 +70,15 @@ describe('Logical Operators Without Spaces', () => {
       const { result } = renderHook(() => usePermissions());
 
       // Test various AND expressions without spaces
-      expect(result.current.hasPermission('properties.view-all&&properties.view-own')).toBe(true);
-      expect(result.current.hasPermission('properties.view-all&&users.create')).toBe(false); // One permission missing
-      expect(result.current.hasPermission('users.create&&posts.view')).toBe(false); // Both permissions missing
+      expect(
+        result.current.hasPermission('properties.view-all&&properties.view-own')
+      ).toBe(true);
+      expect(
+        result.current.hasPermission('properties.view-all&&users.create')
+      ).toBe(false); // One permission missing
+      expect(result.current.hasPermission('users.create&&posts.view')).toBe(
+        false
+      ); // Both permissions missing
     });
 
     it('should handle single & without spaces around operators', () => {
@@ -69,9 +87,15 @@ describe('Logical Operators Without Spaces', () => {
       const { result } = renderHook(() => usePermissions());
 
       // Test single & expressions without spaces
-      expect(result.current.hasPermission('properties.view-all&properties.view-own')).toBe(true);
-      expect(result.current.hasPermission('properties.view-all&users.create')).toBe(false); // One permission missing
-      expect(result.current.hasPermission('users.create&posts.view')).toBe(false); // Both permissions missing
+      expect(
+        result.current.hasPermission('properties.view-all&properties.view-own')
+      ).toBe(true);
+      expect(
+        result.current.hasPermission('properties.view-all&users.create')
+      ).toBe(false); // One permission missing
+      expect(result.current.hasPermission('users.create&posts.view')).toBe(
+        false
+      ); // Both permissions missing
     });
   });
 
@@ -82,9 +106,19 @@ describe('Logical Operators Without Spaces', () => {
       const { result } = renderHook(() => usePermissions());
 
       // Test complex expressions without spaces
-      expect(result.current.hasPermission('(properties.view-all||users.create)&&admin.access')).toBe(true);
-      expect(result.current.hasPermission('(properties.view-all||users.create)&&admin.delete')).toBe(false);
-      expect(result.current.hasPermission('(users.create||posts.view)&&admin.access')).toBe(false);
+      expect(
+        result.current.hasPermission(
+          '(properties.view-all||users.create)&&admin.access'
+        )
+      ).toBe(true);
+      expect(
+        result.current.hasPermission(
+          '(properties.view-all||users.create)&&admin.delete'
+        )
+      ).toBe(false);
+      expect(
+        result.current.hasPermission('(users.create||posts.view)&&admin.access')
+      ).toBe(false);
     });
 
     it('should handle mixed operators without spaces', () => {
@@ -93,34 +127,72 @@ describe('Logical Operators Without Spaces', () => {
       const { result } = renderHook(() => usePermissions());
 
       // Test mixed operators without spaces
-      expect(result.current.hasPermission('properties.view-all&&admin.access||reports.read')).toBe(true);
-      expect(result.current.hasPermission('properties.view-all&admin.access|reports.read')).toBe(true);
-      expect(result.current.hasPermission('users.create&&admin.access||reports.read')).toBe(true); // reports.read exists
+      expect(
+        result.current.hasPermission(
+          'properties.view-all&&admin.access||reports.read'
+        )
+      ).toBe(true);
+      expect(
+        result.current.hasPermission(
+          'properties.view-all&admin.access|reports.read'
+        )
+      ).toBe(true);
+      expect(
+        result.current.hasPermission('users.create&&admin.access||reports.read')
+      ).toBe(true); // reports.read exists
     });
   });
 
   describe('Permission names with hyphens', () => {
     it('should handle permission names with hyphens in expressions without spaces', () => {
-      mockPageProps(['user-profile.edit', 'api-access.read', 'system-config.update']);
+      mockPageProps([
+        'user-profile.edit',
+        'api-access.read',
+        'system-config.update',
+      ]);
 
       const { result } = renderHook(() => usePermissions());
 
       // Test hyphenated permission names without spaces
-      expect(result.current.hasPermission('user-profile.edit||api-access.read')).toBe(true);
-      expect(result.current.hasPermission('user-profile.edit&&api-access.read')).toBe(true);
-      expect(result.current.hasPermission('user-profile.edit&&system-config.update')).toBe(true);
-      expect(result.current.hasPermission('user-profile.edit&&users.create')).toBe(false); // users.create doesn't exist
+      expect(
+        result.current.hasPermission('user-profile.edit||api-access.read')
+      ).toBe(true);
+      expect(
+        result.current.hasPermission('user-profile.edit&&api-access.read')
+      ).toBe(true);
+      expect(
+        result.current.hasPermission('user-profile.edit&&system-config.update')
+      ).toBe(true);
+      expect(
+        result.current.hasPermission('user-profile.edit&&users.create')
+      ).toBe(false); // users.create doesn't exist
     });
 
     it('should handle complex hyphenated permission expressions', () => {
-      mockPageProps(['user-profile.edit', 'api-access.read', 'admin-panel.access']);
+      mockPageProps([
+        'user-profile.edit',
+        'api-access.read',
+        'admin-panel.access',
+      ]);
 
       const { result } = renderHook(() => usePermissions());
 
       // Test complex expressions with hyphenated permissions
-      expect(result.current.hasPermission('(user-profile.edit||api-access.read)&&admin-panel.access')).toBe(true);
-      expect(result.current.hasPermission('user-profile.edit&&(api-access.read||system-config.update)')).toBe(true);
-      expect(result.current.hasPermission('(user-profile.edit||api-access.read)&&system-config.update')).toBe(false);
+      expect(
+        result.current.hasPermission(
+          '(user-profile.edit||api-access.read)&&admin-panel.access'
+        )
+      ).toBe(true);
+      expect(
+        result.current.hasPermission(
+          'user-profile.edit&&(api-access.read||system-config.update)'
+        )
+      ).toBe(true);
+      expect(
+        result.current.hasPermission(
+          '(user-profile.edit||api-access.read)&&system-config.update'
+        )
+      ).toBe(false);
     });
   });
 
@@ -131,12 +203,24 @@ describe('Logical Operators Without Spaces', () => {
       const { result } = renderHook(() => usePermissions());
 
       // Test boolean literals without spaces
-      expect(result.current.hasPermission('true||properties.view-all')).toBe(true);
-      expect(result.current.hasPermission('false||properties.view-all')).toBe(true);
-      expect(result.current.hasPermission('true&&properties.view-all')).toBe(true);
-      expect(result.current.hasPermission('false&&properties.view-all')).toBe(false);
-      expect(result.current.hasPermission('properties.view-all||true')).toBe(true);
-      expect(result.current.hasPermission('properties.view-all&&false')).toBe(false);
+      expect(result.current.hasPermission('true||properties.view-all')).toBe(
+        true
+      );
+      expect(result.current.hasPermission('false||properties.view-all')).toBe(
+        true
+      );
+      expect(result.current.hasPermission('true&&properties.view-all')).toBe(
+        true
+      );
+      expect(result.current.hasPermission('false&&properties.view-all')).toBe(
+        false
+      );
+      expect(result.current.hasPermission('properties.view-all||true')).toBe(
+        true
+      );
+      expect(result.current.hasPermission('properties.view-all&&false')).toBe(
+        false
+      );
     });
   });
 
@@ -147,8 +231,16 @@ describe('Logical Operators Without Spaces', () => {
       const { result } = renderHook(() => usePermissions());
 
       // These should be handled gracefully (though they're not valid expressions)
-      expect(result.current.hasPermission('properties.view-all||||properties.view-own')).toBe(false); // Invalid
-      expect(result.current.hasPermission('properties.view-all&&&&properties.view-own')).toBe(false); // Invalid
+      expect(
+        result.current.hasPermission(
+          'properties.view-all||||properties.view-own'
+        )
+      ).toBe(false); // Invalid
+      expect(
+        result.current.hasPermission(
+          'properties.view-all&&&&properties.view-own'
+        )
+      ).toBe(false); // Invalid
     });
 
     it('should handle expressions starting or ending with operators', () => {
@@ -166,7 +258,11 @@ describe('Logical Operators Without Spaces', () => {
 
   describe('Comparison with spaced expressions', () => {
     it('should produce the same results with and without spaces', () => {
-      mockPageProps(['properties.view-all', 'properties.view-own', 'admin.access']);
+      mockPageProps([
+        'properties.view-all',
+        'properties.view-own',
+        'admin.access',
+      ]);
 
       const { result } = renderHook(() => usePermissions());
 

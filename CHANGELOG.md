@@ -9,14 +9,20 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
-- **Logical operators without spaces**: Fixed issue where logical operators (`||`, `&&`, `|`, `&`) were not working when used without spaces around them (e.g., `properties.view-all||properties.view-own`)
-- **Permission names with hyphens**: Updated regex pattern to properly support permission names containing hyphens (e.g., `properties.view-all`, `user-profile.edit`)
-- **Operator normalization**: Improved operator normalization logic to prevent double replacement issues
+- **Logical operators without spaces**: Fixed issue where logical operators (`||`, `&&`, `|`, `&`)
+  were not working when used without spaces around them (e.g.,
+  `properties.view-all||properties.view-own`)
+- **Permission names with hyphens**: Updated regex pattern to properly support permission names
+  containing hyphens (e.g., `properties.view-all`, `user-profile.edit`)
+- **Operator normalization**: Improved operator normalization logic to prevent double replacement
+  issues
 
 ### Added
 
-- **Comprehensive test coverage**: Added extensive test suite for logical operators without spaces, covering various edge cases and scenarios
-- **Hyphenated permission support**: Full support for permission names with hyphens in logical expressions
+- **Comprehensive test coverage**: Added extensive test suite for logical operators without spaces,
+  covering various edge cases and scenarios
+- **Hyphenated permission support**: Full support for permission names with hyphens in logical
+  expressions
 
 ### Technical Details
 
