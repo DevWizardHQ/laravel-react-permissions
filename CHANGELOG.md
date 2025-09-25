@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.1.4 - 2025-09-25
+
+### What's Changed
+
+* fix: double pipe issue  by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/23
+
+**Full Changelog**: https://github.com/DevWizardHQ/laravel-react-permissions/compare/v1.1.3...v1.1.4
+
 ## v1.1.3 - 2025-01-27
 
 ### Fixed
