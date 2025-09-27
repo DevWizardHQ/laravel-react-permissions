@@ -9,7 +9,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### What's Changed
 
-* fix: double pipe issue  by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/23
+- fix: double pipe issue by @iqbalhasandev in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/23
 
 **Full Changelog**: https://github.com/DevWizardHQ/laravel-react-permissions/compare/v1.1.3...v1.1.4
 
