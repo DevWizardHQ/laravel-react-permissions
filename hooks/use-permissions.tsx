@@ -152,12 +152,18 @@ export function usePermissions(permissions?: string[]) {
           hasPermissionResult.toString()
         );
       } else {
-        // For normal permissions, use word boundaries
+        // For normal permissions, escape special regex characters
         const escapedPermission = permission.replace(
           /[.*+?^${}()|[\]\\]/g,
           '\\$&'
         );
-        const permissionRegex = new RegExp(`\\b${escapedPermission}\\b`, 'g');
+        
+        // Use word boundaries only if the permission doesn't contain hyphens
+        // because \b doesn't work with hyphens (they're considered word separators)
+        const permissionRegex = permission.includes('-')
+          ? new RegExp(escapedPermission, 'g')
+          : new RegExp(`\\b${escapedPermission}\\b`, 'g');
+        
         evaluatedExpression = evaluatedExpression.replace(
           permissionRegex,
           hasPermissionResult.toString()

@@ -5,11 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.1.5 - 2025-01-27
+
+### Fixed
+
+- **Critical Fix**: Fixed `ReferenceError: all is not defined` error when using hyphenated permission names in expressions
+- Fixed regex word boundary issue that prevented proper matching of permissions containing hyphens (e.g., `view-all`, `user-profile.edit`)
+- Permission expressions like `visitor.request.view-all||visitor.request.view-department` now work correctly
+
+### Added
+
+- Comprehensive test suite for hyphenated permissions covering various edge cases
+- Support for complex nested expressions with hyphenated permission names
+- Better handling of mixed permission types (hyphenated and non-hyphenated)
+
+### Technical Details
+
+- Updated `evaluatePermissionExpression` function to use word boundaries only for non-hyphenated permissions
+- Hyphenated permissions now use simple regex matching instead of word boundaries
+- Maintains backward compatibility with existing non-hyphenated permissions
+
 ## v1.1.4 - 2025-09-25
 
 ### What's Changed
 
-* fix: double pipe issue  by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/23
+- fix: double pipe issue by @iqbalhasandev in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/23
 
 **Full Changelog**: https://github.com/DevWizardHQ/laravel-react-permissions/compare/v1.1.3...v1.1.4
 
