@@ -9,9 +9,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
-- **Critical Fix**: Fixed `ReferenceError: all is not defined` error when using hyphenated permission names in expressions
-- Fixed regex word boundary issue that prevented proper matching of permissions containing hyphens (e.g., `view-all`, `user-profile.edit`)
-- Permission expressions like `visitor.request.view-all||visitor.request.view-department` now work correctly
+- **Critical Fix**: Fixed `ReferenceError: all is not defined` error when using hyphenated
+  permission names in expressions
+- Fixed regex word boundary issue that prevented proper matching of permissions containing hyphens
+  (e.g., `view-all`, `user-profile.edit`)
+- Permission expressions like `visitor.request.view-all||visitor.request.view-department` now work
+  correctly
 
 ### Added
 
@@ -21,7 +24,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Technical Details
 
-- Updated `evaluatePermissionExpression` function to use word boundaries only for non-hyphenated permissions
+- Updated `evaluatePermissionExpression` function to use word boundaries only for non-hyphenated
+  permissions
 - Hyphenated permissions now use simple regex matching instead of word boundaries
 - Maintains backward compatibility with existing non-hyphenated permissions
 

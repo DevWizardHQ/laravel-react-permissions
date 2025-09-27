@@ -7,11 +7,11 @@ jest.mock('@inertiajs/react', () => ({
     props: {
       auth: {
         user: {
-          permissions: global.mockUserPermissions || []
-        }
-      }
-    }
-  })
+          permissions: global.mockUserPermissions || [],
+        },
+      },
+    },
+  }),
 }));
 
 const mockPageProps = (permissions: string[]) => {
@@ -24,12 +24,16 @@ describe('Hyphenated Permissions', () => {
   });
 
   it('should handle hyphenated permissions in OR expressions', () => {
-    mockPageProps(['visitor.request.view-all', 'visitor.request.view-department']);
+    mockPageProps([
+      'visitor.request.view-all',
+      'visitor.request.view-department',
+    ]);
 
     const { result } = renderHook(() => usePermissions());
 
     // Test the original failing expression
-    const expression = 'visitor.request.view-all||visitor.request.view-department||visitor.request.view-own';
+    const expression =
+      'visitor.request.view-all||visitor.request.view-department||visitor.request.view-own';
     const hasPermission = result.current.hasPermission(expression);
 
     expect(hasPermission).toBe(true);
@@ -61,11 +65,16 @@ describe('Hyphenated Permissions', () => {
   });
 
   it('should handle complex nested expressions with hyphens', () => {
-    mockPageProps(['admin.access', 'user-profile.edit', 'system-config.update']);
+    mockPageProps([
+      'admin.access',
+      'user-profile.edit',
+      'system-config.update',
+    ]);
 
     const { result } = renderHook(() => usePermissions());
 
-    const expression = '(admin.access||user-profile.edit)&&system-config.update';
+    const expression =
+      '(admin.access||user-profile.edit)&&system-config.update';
     const hasPermission = result.current.hasPermission(expression);
 
     expect(hasPermission).toBe(true);
@@ -123,18 +132,22 @@ describe('Hyphenated Permissions', () => {
 
     const { result } = renderHook(() => usePermissions());
 
-    const expression = 'visitor.request.view-all||visitor.request.view-department';
+    const expression =
+      'visitor.request.view-all||visitor.request.view-department';
     const hasPermission = result.current.hasPermission(expression);
 
     expect(hasPermission).toBe(false);
   });
 
   it('should handle very long hyphenated permission names', () => {
-    mockPageProps(['very-long-permission-name-with-many-hyphens.and-more-hyphens']);
+    mockPageProps([
+      'very-long-permission-name-with-many-hyphens.and-more-hyphens',
+    ]);
 
     const { result } = renderHook(() => usePermissions());
 
-    const expression = 'very-long-permission-name-with-many-hyphens.and-more-hyphens||short.permission';
+    const expression =
+      'very-long-permission-name-with-many-hyphens.and-more-hyphens||short.permission';
     const hasPermission = result.current.hasPermission(expression);
 
     expect(hasPermission).toBe(true);
@@ -161,7 +174,8 @@ describe('Hyphenated Permissions', () => {
     const { result } = renderHook(() => usePermissions());
 
     // Test that the expression validation works
-    const expression = 'visitor.request.view-all||visitor.request.view-department';
+    const expression =
+      'visitor.request.view-all||visitor.request.view-department';
     const isValid = result.current.isValidExpression(expression);
     const checkResult = result.current.checkExpression(expression);
 

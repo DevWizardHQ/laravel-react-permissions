@@ -157,13 +157,13 @@ export function usePermissions(permissions?: string[]) {
           /[.*+?^${}()|[\]\\]/g,
           '\\$&'
         );
-        
+
         // Use word boundaries only if the permission doesn't contain hyphens
         // because \b doesn't work with hyphens (they're considered word separators)
         const permissionRegex = permission.includes('-')
           ? new RegExp(escapedPermission, 'g')
           : new RegExp(`\\b${escapedPermission}\\b`, 'g');
-        
+
         evaluatedExpression = evaluatedExpression.replace(
           permissionRegex,
           hasPermissionResult.toString()
