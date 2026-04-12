@@ -6,6 +6,8 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^@inertiajs/react$': '<rootDir>/__mocks__/@inertiajs.ts',
+    '^react-dom/test-utils$':
+      '<rootDir>/__tests__/react-dom-test-utils-shim.cjs',
   },
   testMatch: [
     '<rootDir>/**/__tests__/**/*.(ts|tsx|js)',
