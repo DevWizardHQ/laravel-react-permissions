@@ -9,76 +9,146 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### What's Changed
 
-* fix: hyphenated permissions regex by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/24
-* build(deps-dev): bump @typescript-eslint/parser from 8.44.1 to 8.45.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/25
-* build(deps-dev): bump @types/react from 19.1.13 to 19.1.15 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/26
-* build(deps-dev): bump jest-environment-jsdom from 30.1.2 to 30.2.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/27
-* build(deps-dev): bump jest from 30.1.3 to 30.2.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/29
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.44.1 to 8.45.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/28
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.45.0 to 8.46.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/31
-* build(deps-dev): bump @testing-library/jest-dom from 6.8.0 to 6.9.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/32
-* build(deps-dev): bump @types/react from 19.1.15 to 19.2.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/33
-* build(deps-dev): bump eslint from 9.36.0 to 9.37.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/36
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.0 to 8.46.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/38
-* build(deps-dev): bump @types/react from 19.2.1 to 19.2.2 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/39
-* build(deps-dev): bump @typescript-eslint/parser from 8.46.0 to 8.46.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/41
-* build(deps-dev): bump ts-jest from 29.4.4 to 29.4.5 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/42
-* build(deps-dev): bump typescript from 5.9.2 to 5.9.3 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/34
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.1 to 8.46.2 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/44
-* build(deps-dev): bump eslint from 9.37.0 to 9.38.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/45
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.2 to 8.46.3 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/48
-* build(deps-dev): bump globals from 16.4.0 to 16.5.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/50
-* build(deps-dev): bump @typescript-eslint/parser from 8.46.2 to 8.46.3 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/51
-* build(deps-dev): bump eslint from 9.38.0 to 9.39.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/49
-* build(deps-dev): bump @typescript-eslint/parser from 8.46.3 to 8.46.4 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/52
-* build(deps-dev): bump @typescript-eslint/parser from 8.46.4 to 8.47.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/54
-* build(deps-dev): bump tsup from 8.5.0 to 8.5.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/57
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.3 to 8.47.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/55
-* build(deps-dev): bump @types/react from 19.2.2 to 19.2.7 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/59
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.47.0 to 8.49.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/60
-* build(deps-dev): bump ts-jest from 29.4.5 to 29.4.6 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/62
-* build(deps-dev): bump @typescript-eslint/parser from 8.47.0 to 8.49.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/63
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.49.0 to 8.50.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/64
-* build(deps-dev): bump eslint from 9.39.1 to 9.39.2 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/66
-* build(deps-dev): bump @testing-library/react from 16.3.0 to 16.3.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/67
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.50.0 to 8.50.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/68
-* build(deps-dev): bump @typescript-eslint/parser from 8.50.0 to 8.50.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/69
-* build(deps-dev): bump @typescript-eslint/parser from 8.50.1 to 8.51.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/70
-* build(deps): bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/72
-* build(deps-dev): bump @typescript-eslint/parser from 8.51.0 to 8.52.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/74
-* build(deps-dev): bump @typescript-eslint/parser from 8.52.0 to 8.53.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/76
-* build(deps-dev): bump @types/react from 19.2.7 to 19.2.8 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/78
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.50.1 to 8.53.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/77
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.53.0 to 8.53.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/79
-* build(deps-dev): bump prettier from 3.6.2 to 3.8.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/80
-* build(deps-dev): bump @typescript-eslint/parser from 8.53.0 to 8.53.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/81
-* build(deps-dev): bump @testing-library/react from 16.3.1 to 16.3.2 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/82
-* build(deps-dev): bump prettier from 3.8.0 to 3.8.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/83
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.53.1 to 8.54.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/84
-* build(deps-dev): bump @types/react from 19.2.8 to 19.2.9 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/87
-* build(deps-dev): bump @types/react from 19.2.9 to 19.2.10 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/89
-* build(deps-dev): bump @typescript-eslint/parser from 8.54.0 to 8.55.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/90
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.54.0 to 8.55.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/92
-* build(deps-dev): bump @types/react from 19.2.10 to 19.2.14 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/94
-* build(deps-dev): bump @typescript-eslint/parser from 8.55.0 to 8.56.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/95
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.55.0 to 8.56.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/97
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.56.1 to 8.57.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/101
-* build(deps-dev): bump @typescript-eslint/parser from 8.56.1 to 8.57.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/102
-* build(deps-dev): bump jest from 30.2.0 to 30.3.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/104
-* build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.57.0 to 8.57.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/105
-* build(deps): bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/37
-* build(deps): bump actions/setup-node from 5 to 6 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/43
-* build(deps-dev): bump eslint-plugin-react-hooks from 5.2.0 to 7.0.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/47
-* build(deps): bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/58
-* build(deps-dev): bump eslint from 9.39.2 to 10.0.3 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/103
-* build(deps): bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/108
-* build(deps-dev): bump @typescript-eslint/parser from 8.57.0 to 8.57.1 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/106
-* build(deps-dev): bump jest-environment-jsdom from 30.2.0 to 30.3.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/107
-* build(deps-dev): bump globals from 16.5.0 to 17.4.0 by @dependabot[bot] in https://github.com/DevWizardHQ/laravel-react-permissions/pull/100
-* fix: enable code quality workflow on pull requests by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/110
-* chore: update npm dependencies by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/109
-* fix: resolve npm peer dependency conflict blocking CI by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/111
-* chore: release v1.2.0 by @iqbalhasandev in https://github.com/DevWizardHQ/laravel-react-permissions/pull/112
+- fix: hyphenated permissions regex by @iqbalhasandev in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/24
+- build(deps-dev): bump @typescript-eslint/parser from 8.44.1 to 8.45.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/25
+- build(deps-dev): bump @types/react from 19.1.13 to 19.1.15 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/26
+- build(deps-dev): bump jest-environment-jsdom from 30.1.2 to 30.2.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/27
+- build(deps-dev): bump jest from 30.1.3 to 30.2.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/29
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.44.1 to 8.45.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/28
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.45.0 to 8.46.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/31
+- build(deps-dev): bump @testing-library/jest-dom from 6.8.0 to 6.9.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/32
+- build(deps-dev): bump @types/react from 19.1.15 to 19.2.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/33
+- build(deps-dev): bump eslint from 9.36.0 to 9.37.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/36
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.0 to 8.46.1 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/38
+- build(deps-dev): bump @types/react from 19.2.1 to 19.2.2 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/39
+- build(deps-dev): bump @typescript-eslint/parser from 8.46.0 to 8.46.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/41
+- build(deps-dev): bump ts-jest from 29.4.4 to 29.4.5 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/42
+- build(deps-dev): bump typescript from 5.9.2 to 5.9.3 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/34
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.1 to 8.46.2 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/44
+- build(deps-dev): bump eslint from 9.37.0 to 9.38.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/45
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.2 to 8.46.3 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/48
+- build(deps-dev): bump globals from 16.4.0 to 16.5.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/50
+- build(deps-dev): bump @typescript-eslint/parser from 8.46.2 to 8.46.3 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/51
+- build(deps-dev): bump eslint from 9.38.0 to 9.39.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/49
+- build(deps-dev): bump @typescript-eslint/parser from 8.46.3 to 8.46.4 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/52
+- build(deps-dev): bump @typescript-eslint/parser from 8.46.4 to 8.47.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/54
+- build(deps-dev): bump tsup from 8.5.0 to 8.5.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/57
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.46.3 to 8.47.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/55
+- build(deps-dev): bump @types/react from 19.2.2 to 19.2.7 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/59
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.47.0 to 8.49.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/60
+- build(deps-dev): bump ts-jest from 29.4.5 to 29.4.6 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/62
+- build(deps-dev): bump @typescript-eslint/parser from 8.47.0 to 8.49.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/63
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.49.0 to 8.50.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/64
+- build(deps-dev): bump eslint from 9.39.1 to 9.39.2 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/66
+- build(deps-dev): bump @testing-library/react from 16.3.0 to 16.3.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/67
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.50.0 to 8.50.1 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/68
+- build(deps-dev): bump @typescript-eslint/parser from 8.50.0 to 8.50.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/69
+- build(deps-dev): bump @typescript-eslint/parser from 8.50.1 to 8.51.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/70
+- build(deps): bump dependabot/fetch-metadata from 2.4.0 to 2.5.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/72
+- build(deps-dev): bump @typescript-eslint/parser from 8.51.0 to 8.52.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/74
+- build(deps-dev): bump @typescript-eslint/parser from 8.52.0 to 8.53.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/76
+- build(deps-dev): bump @types/react from 19.2.7 to 19.2.8 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/78
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.50.1 to 8.53.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/77
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.53.0 to 8.53.1 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/79
+- build(deps-dev): bump prettier from 3.6.2 to 3.8.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/80
+- build(deps-dev): bump @typescript-eslint/parser from 8.53.0 to 8.53.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/81
+- build(deps-dev): bump @testing-library/react from 16.3.1 to 16.3.2 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/82
+- build(deps-dev): bump prettier from 3.8.0 to 3.8.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/83
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.53.1 to 8.54.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/84
+- build(deps-dev): bump @types/react from 19.2.8 to 19.2.9 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/87
+- build(deps-dev): bump @types/react from 19.2.9 to 19.2.10 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/89
+- build(deps-dev): bump @typescript-eslint/parser from 8.54.0 to 8.55.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/90
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.54.0 to 8.55.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/92
+- build(deps-dev): bump @types/react from 19.2.10 to 19.2.14 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/94
+- build(deps-dev): bump @typescript-eslint/parser from 8.55.0 to 8.56.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/95
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.55.0 to 8.56.1 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/97
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.56.1 to 8.57.0 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/101
+- build(deps-dev): bump @typescript-eslint/parser from 8.56.1 to 8.57.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/102
+- build(deps-dev): bump jest from 30.2.0 to 30.3.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/104
+- build(deps-dev): bump @typescript-eslint/eslint-plugin from 8.57.0 to 8.57.1 by @dependabot[bot]
+  in https://github.com/DevWizardHQ/laravel-react-permissions/pull/105
+- build(deps): bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/37
+- build(deps): bump actions/setup-node from 5 to 6 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/43
+- build(deps-dev): bump eslint-plugin-react-hooks from 5.2.0 to 7.0.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/47
+- build(deps): bump actions/checkout from 5 to 6 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/58
+- build(deps-dev): bump eslint from 9.39.2 to 10.0.3 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/103
+- build(deps): bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/108
+- build(deps-dev): bump @typescript-eslint/parser from 8.57.0 to 8.57.1 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/106
+- build(deps-dev): bump jest-environment-jsdom from 30.2.0 to 30.3.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/107
+- build(deps-dev): bump globals from 16.5.0 to 17.4.0 by @dependabot[bot] in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/100
+- fix: enable code quality workflow on pull requests by @iqbalhasandev in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/110
+- chore: update npm dependencies by @iqbalhasandev in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/109
+- fix: resolve npm peer dependency conflict blocking CI by @iqbalhasandev in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/111
+- chore: release v1.2.0 by @iqbalhasandev in
+  https://github.com/DevWizardHQ/laravel-react-permissions/pull/112
 
 **Full Changelog**: https://github.com/DevWizardHQ/laravel-react-permissions/compare/v1.1.4...v1.2.0
 
