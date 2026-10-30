@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.3.0 - 2026-10-30
+
+### Added
+
+- Support for Inertia 3. The `@inertiajs/react` peer range is now `^1.0.0 || ^2.0.0 || ^3.0.0`, so apps on Inertia 3 can install the package without peer dependency conflicts. The test suite now runs against Inertia 3.7.1.
+
+### Dependencies
+
+- Dev dependencies updated: `@inertiajs/react` 3.7.1, `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` 8.70.1, `ts-jest` 29.4.14, `prettier` 3.9.9.
+- CI now tests on Node 22 and 24. Node 20 reached end of life in April 2026. The package's `engines` field is unchanged.
+
 ## v1.2.1 - 2026-09-20
 
 ### Security
