@@ -105,7 +105,6 @@
     "globals": "^17.12.0",
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
-    "lefthook": "2.2.2",
     "prettier": "^3.9.9",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
@@ -125,8 +124,5 @@
     "last 2 versions",
     "Firefox ESR",
     "not dead"
-  ],
-  "allowScripts": {
-    "lefthook": true
-  }
+  ]
 }
